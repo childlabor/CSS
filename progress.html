@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>渐变模拟进度条动态效果</title>
+		<style>
+			.progress {
+				position: relative;
+				height: 84px;
+				padding-top: 18px;
+			}
+			
+			.progress-bar {
+				width: 100%;
+				height: 16px;
+				border-radius: 6px;
+				background-color: #e2e2e2;
+				-webkit-box-shadow: inset 0 0 5px 2px #b7b7b7;
+				box-shadow: inset 0 0 5px 2px #b7b7b7;
+			}
+			
+			.progress-badge {
+				position: absolute;
+				top: 0;
+				display: block;
+				width: 46px;
+				height: 46px;
+				line-height: 46px;
+				text-align: center;
+				color: #fff;
+				font-family: Bodoni MT;
+				font-size: 22px;
+				font-weight: 700;
+				border-radius: 50%;
+				border: 2px solid #939495;
+				background-color: rgba(147, 148, 149, .9);
+			}
+			
+			.progress-txt {
+				position: absolute;
+				bottom: -50px;
+				left: -36px;
+				width: 120px;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 34px;
+				color: #454545;
+			}
+			
+			.progress-badge:hover {
+				background-color: #48c194;
+				text-shadow: 2px 2px 2px #008000;
+				-webkit-transition: all .3s;
+				transition: all .3s;
+				cursor: pointer;
+			}
+			
+			.progress-badge:hover .progress-txt {
+				text-decoration: underline;
+				text-shadow: none;
+			}
+			
+			.progress-badge1 {
+				left: 8%;
+			}
+			
+			.progress-badge2 {
+				left: 45%;
+			}
+			
+			.progress-badge3 {
+				left: 84%;
+			}
+			
+			.progress-bar-striped {
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				height: 100%;
+				border: 2px solid rgba(38, 250, 170, .7);
+				border-radius: 6px;
+				background-color: #35d296;
+				background-image: linear-gradient(-45deg, rgba(255, 255, 255, .15) 20%, transparent 20%, transparent 40%, rgba(255, 255, 255, .15) 40%, rgba(255, 255, 255, .15) 60%, transparent 60%, transparent 80%, rgba(255, 255, 255, .15));
+				background-size: 16px 16px;
+				-webkit-animation: striped .3s linear infinite;
+				animation: striped .3s linear infinite;
+			}
+			
+			.progress-badge-over {
+				border: 2px solid #26faaa;
+				background-color: #35d296;
+				background-color: rgba(53, 210, 150, .9);
+				background-image: linear-gradient(-45deg, rgba(255, 255, 255, .15) 20%, transparent 20%, transparent 40%, rgba(255, 255, 255, .15) 40%, rgba(255, 255, 255, .15) 60%, transparent 60%, transparent 80%, rgba(255, 255, 255, .15));
+			}
+			
+			@-webkit-keyframes striped {
+				25% {
+					background-image: linear-gradient(-45deg, rgba(255, 255, 255, .15) 20%, transparent 20%, transparent 40%, rgba(255, 255, 255, .15) 40%, rgba(255, 255, 255, .15) 60%, transparent 60%, transparent 80%, rgba(255, 255, 255, .15));
+				}
+				50% {
+					background-image: linear-gradient(-45deg, rgba(255, 255, 255, .15) 10%, rgba(255, 255, 255, .15) 30%, transparent 30%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 70%, transparent 70%, transparent 90%, rgba(255, 255, 255, .15));
+				}
+				75% {
+					background-image: linear-gradient(-45deg, transparent 20%, rgba(255, 255, 255, .15) 20%, rgba(255, 255, 255, .15) 40%, transparent 40%, transparent 60%, rgba(255, 255, 255, .15) 60%, rgba(255, 255, 255, .15) 80%, transparent);
+				}
+			}
+			
+			@keyframes striped {
+				25% {
+					background-image: linear-gradient(-45deg, rgba(255, 255, 255, .15) 20%, transparent 20%, transparent 40%, rgba(255, 255, 255, .15) 40%, rgba(255, 255, 255, .15) 60%, transparent 60%, transparent 80%, rgba(255, 255, 255, .15));
+				}
+				50% {
+					background-image: linear-gradient(-45deg, rgba(255, 255, 255, .15) 10%, rgba(255, 255, 255, .15) 30%, transparent 30%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 70%, transparent 70%, transparent 90%, rgba(255, 255, 255, .15));
+				}
+				75% {
+					background-image: linear-gradient(-45deg, transparent 20%, rgba(255, 255, 255, .15) 20%, rgba(255, 255, 255, .15) 40%, transparent 40%, transparent 60%, rgba(255, 255, 255, .15) 60%, rgba(255, 255, 255, .15) 80%, transparent);
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="progress">
+			<div class="progress-bar">
+				<!-- 进度百分比 -->
+				<div class="progress-bar-striped" style="width: 60%;"></div>
+			</div>
+			<a href="#" class="progress-badge progress-badge1 progress-badge-over">
+				01
+				<p class="progress-txt">进度一</p>
+			</a>
+			<a href="#" class="progress-badge progress-badge2 progress-badge-over">
+				02
+				<p class="progress-txt">进度二</p>
+			</a>
+			<a href="#" class="progress-badge progress-badge3">
+				03
+				<p class="progress-txt">进度三</p>
+			</a>
+		</div>
+	</body>
+
+</html>
