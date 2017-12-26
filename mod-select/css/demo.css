@@ -1,0 +1,451 @@
+/*reset*/
+ul, ol, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 下拉模拟 */
+.mod-select {
+	position: relative;
+	float: left;
+}
+.box-select {
+	position: relative;
+	width: 100%;
+	height: 30px;
+	border: 1px solid #bfbfbf;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.box-option {
+	position: absolute;
+	z-index: 999;
+	top: 100%;
+	left: 0;
+	display: none;
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: 100%;
+	max-height: 180px;
+	border: 1px solid #bfbfbf;
+	background-color: #e0e4ec;
+}
+
+.input-select {
+	float: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0 15% 0 0;
+	line-height: 30px;
+	text-align: center;
+	border: none;
+	outline: none !important;
+	cursor: pointer;
+}
+
+.icon-select {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 15%;
+	height: 100%;
+	background: url(../images/icon-select2.png) no-repeat center center;
+}
+
+.icon-move {
+	border-left: none;
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.option-select {
+	width: 100%;
+	padding: 12px 0;
+	margin: 0;
+}
+
+.option-select li {
+	height: 40px;
+	font-size: 12px;
+	line-height: 40px;
+	text-align: center;
+	color: #4a4a4a;
+}
+
+.option-select li:hover {
+	background-color: #b7c0cd;
+	cursor: pointer;
+}
+
+
+
+/* select-tree*/
+
+.mod-select-tree {
+	position: relative;
+	float: left;
+}
+
+.box-select-tree {
+	position: relative;
+	width: 100%;
+	height: 30px;
+	border: 1px solid #bfbfbf;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.box-option-tree {
+	position: absolute;
+	z-index: 999;
+	top: 100%;
+	left: 0;
+	display: none;
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: 100%;
+	max-height: 200px;
+	border: 1px solid #bfbfbf;
+	background-color: #e0e4ec;
+}
+
+.input-select-tree {
+	float: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0 15% 0 0;
+	line-height: 30px;
+	text-align: center;
+	border: none;
+	outline: none !important;
+	cursor: pointer;
+}
+
+.option-select-tree {
+	width: 100%;
+	padding: 12px 0;
+	margin: 0;
+}
+
+.level-box{
+	display: none;
+}
+
+.option-select-tree {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: 10px;
+}
+
+.option-select-tree li {
+	width: 100%;
+	font-size: 13px;
+	color: #4a4a4a;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.option-select-tree span {
+	display: inline-block;
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+.option-select-tree span:hover {
+	text-decoration: underline;
+}
+
+.tree-drop,
+.tree-dot,
+.tree-dot-end,
+.tree-dot-none {
+	display: inline-block;
+	width: 18px;
+	height: 30px;
+	vertical-align: middle;
+	background-size: 100% 100%;
+}
+
+.tree-drop,
+.option-select-tree span {
+	cursor: pointer;
+}
+
+.tree-dot {
+	background: url(../images/tree/treeline.gif) repeat-y center center;
+}
+
+.tree-drop {
+	background: url(../images/tree/collapseLine.gif) no-repeat 1px 0;
+}
+
+.tree-dot-end {
+	background: url(../images/tree/treeNodeLine.gif) no-repeat 1px -1px;
+}
+
+.tree-drop-down {
+	background: url(../images/tree/expandLine.gif) no-repeat 2px 0;
+}
+
+.option-select-tree li:last-child > .tree-drop {
+	background: url(../images/tree/lastCollapseNode.gif) no-repeat 1px -1px;
+}
+
+.option-select-tree li:last-child > .tree-drop-down {
+	background: url(../images/tree/lastExpandNode.gif) no-repeat 2px -1px;
+}
+
+.option-select-tree li:last-child > .tree-dot-end {
+	background: url(../images/tree/lastline.gif) no-repeat 2px -1px;
+}
+
+.option-select-tree > li:last-child .tree-dot:first-child {
+	background: none;
+}
+
+.level1,
+.level2,
+.level3 {
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+.level1 {
+	background-image: url(../images/tree/level1.png);
+	text-indent: 30px;
+}
+.level2 {
+	background-image: url(../images/tree/level2.png);
+	text-indent: 30px;
+}
+.level3 {
+	background-image: url(../images/tree/level3.png);
+}
+.level-msg {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 28px;
+	font-size: 14px;
+}
+.level3 .level-msg {
+	text-indent: 22px;
+}
+
+
+/* */
+.check-d12 {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 20px;
+	font-size: 12px;
+	color: #919191;
+	font-weight: 300;
+}
+
+.permission-set .option-select-tree span:hover {
+	text-decoration: none;
+}
+
+.permission-last-ul {
+	display: inline-block;
+	overflow: hidden;
+	line-height: 30px;
+	vertical-align: middle;
+}
+.permission-last-ul li {
+	float: left;
+	width:auto;
+	margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 多选下拉 */
+.checktree-input {
+  float: left;
+  width: 100px;
+  height: 30px;
+  text-indent: 10px;
+  border: 1px solid #bfbfbf;
+  border-radius: 2px;
+}
+
+.checktree-box {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	position: relative;
+	margin: 3px 0 0 2px;
+}
+
+.checktree {
+	display: none;
+	position:absolute;
+	top: 30px;
+	right: 0;
+	border: 1px solid #42d79f;
+	width: 350px;
+	overflow: hidden;
+	background-color: #fff;
+	z-index: 9999;
+}
+
+.checktree .ml-bd {
+	max-height: 350px;
+	overflow-y: auto; 
+	padding-top: 0;
+	width: 106%;
+}
+
+.ml-bd .level-box {
+  display: block;
+}
+
+.m-m {
+  display: inline-block;
+  width: 20px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 6px;
+  background: url(../images/mm.png) no-repeat left center;
+  cursor: pointer;
+}
+
+.checktree .m-m {
+	background-image: url(../images/drop1.png);
+	vertical-align: top;
+}
+
+.checktree-btn {
+	width: 24px;
+	height: 24px;
+	background: url(../images/partment.png) no-repeat 0 0;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.tree-submit {
+	display: inline-block;
+	float: right;
+	padding: 0 14px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	cursor: pointer;
+	background-color: #42D79F;
+	border-radius:4px;
+	color: #fff; 
+	margin: 10px 30px 6px 0;
+}
+
+/* 多选下拉 额外加入checkbox样式美化*/
+.mod-radio {
+	position: relative;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.mod-radio input[type='radio'],
+.mod-radio input[type='checkbox'] {
+	visibility: hidden; /* 隐藏原始框 */
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.mod-radio input[type='radio'] + label,
+.mod-radio input[type='checkbox'] + label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #c9c9c9;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.mod-radio input[disabled='disabled'] + label {
+	background: url(../images/checked-disabled.png) no-repeat center center;
+}
+
+.mod-radio input[type='checkbox'] + label {
+	border-radius: 5px;
+}
+
+.mod-radio input[type='radio'] + label {
+	border-radius: 50%;
+}
+
+.mod-radio input[type='radio'] + label::after {
+	content:"";
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	-webkit-transition: background .5s linear;
+	transition: background .5s linear;
+}
+
+/* 选中样式  */
+.mod-radio input[type='radio']:checked + label {
+	border: 1px solid #42d79f;
+	background-color: #fff;
+}
+
+.mod-radio input[type='radio']:checked + label::after {
+	background-color: #42d79f;
+}
+
+.mod-radio input[type='checkbox']:checked + label::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/checked.png) no-repeat center center;
+	background-size: 90%;
+}
+
+/* IE8下的降级处理 */
+@media \0screen {
+	.mod-radio input[type='checkbox'] + label,
+	.mod-radio input[type='radio'] + label {
+		display: none;
+	}
+
+	.mod-radio input[type='radio'],
+	.mod-radio input[type='checkbox'] {
+		visibility: visible;
+	}
+}

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单美化-select模拟</title>
+		<link rel="stylesheet" href="css/demo.css" />
+		<script type="text/javascript" src="js/jquery.1.9.1.min.js" ></script>
+		<script type="text/javascript" src="js/script.js" ></script>
+	</head>
+	<body>	
+		<p>下拉 :</p>
+		<!-- 模拟下拉 -->
+		<div class="mod-select" style="width: 180px;">
+			<div class="box-select">
+				<input class="input-select" placeholder="--请选择--" readonly="true">
+				<span class="icon-select"></span>
+			</div>
+			<div class="box-option">
+				<ul class="option-select">
+					<li>账号设置</li>
+					<li>互动交流</li>
+					<li>活动管理</li>
+					<li>技术评估</li>
+				</ul>
+			</div>
+		</div>
+	  
+	  <div style="clear: both;"></div>
+	  <hr>
+	 	
+	 	<p>树状下拉 :</p>
+	 	<!-- 树状下拉模拟 -->
+	 	<div class="mod-select-tree" style="width: 180px;">
+			<div class="box-select-tree">
+				<input class="input-select-tree" placeholder="--请选择--" readonly="readonly">
+				<span class="icon-select"></span>
+			</div>
+			<div class="box-option-tree">
+				<ul class="option-select-tree">
+					<li>
+						<i class="tree-drop"></i>
+						<span class="level1">账号设置1</span>
+						<ul class="level-box">
+							<li>
+								<i class="tree-dot"></i>
+								<i class="tree-drop"></i>
+								<span class="level2">互动交流2</span>
+								<ul class="level-box">
+									<li>
+										<i class="tree-dot"></i>
+										<i class="tree-dot"></i>
+										<i class="tree-dot-end"></i>
+										<span class="level3">账号设置3</span>
+									</li>
+									<li>
+										<i class="tree-dot"></i>
+										<i class="tree-dot"></i>
+										<i class="tree-dot-end"></i>
+										<span class="level3">互动交流3</span>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<i class="tree-dot"></i>
+								<i class="tree-dot-end"></i>
+								<span class="level2">互动交流2</span>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<i class="tree-drop"></i>
+						<span class="level1">互动交流1</span>
+						<ul class="level-box">
+							<li>
+								<i class="tree-dot"></i>
+								<i class="tree-dot-end"></i>
+								<span class="level2">账号设置2</span>
+							</li>
+							<li>
+								<i class="tree-dot"></i>
+								<i class="tree-dot-end"></i>
+								<span class="level2">互动交流2</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+	 	<div style="clear: both;"></div>
+	  <hr>
+	  
+	  <p>树状下拉多选 :</p>
+	  <!-- 多选下拉控件 -->
+		<input type="text" class="checktree-input" style="width:400px;">
+		<!-- input输入框(需带class:"checktree-input")后紧接下拉多选框-->
+		<div class="checktree-box">
+			<span class="checktree-btn"></span>
+			<div class="checktree">
+				<div class="clearfix">
+					<span class="m-m" title="全部展开/收起"></span>
+					<span class="tree-submit">提交</span>
+				</div>
+				<div class="ml-bd">
+					<ul class="option-select-tree nobg">
+						<li>
+							<i class="tree-drop tree-drop-down"></i>
+							<span class="level1">
+								区域市场事业部
+							</span>
+							<ul class="level-box">
+								<li>
+									<i class="tree-dot"></i>
+									<i class="tree-drop tree-drop-down"></i>
+									<span class="level2">厦门本部</span>
+									<ul class="level-box">
+										<li>
+											<i class="tree-dot"></i>
+											<i class="tree-dot"></i>
+											<i class="tree-dot-end"></i>
+											<b class="check-d12">
+												<span class="mod-radio">  
+											    <input type="checkbox" id="organization-lv3-1" name="organization" class="organization-lv3">
+											    <label for="organization-lv3-1"></label>
+											  </span>
+											</b>
+											<span class="level3">
+												<em class="level-msg">厦门市营运中心</em>
+											</span>	
+										</li>
+										<li>
+											<i class="tree-dot"></i>
+											<i class="tree-dot"></i>
+											<i class="tree-dot-end"></i>
+											<b class="check-d12">
+												<span class="mod-radio">  
+											    <input type="checkbox" id="organization-lv3-2" name="organization" class="organization-lv3">
+											    <label for="organization-lv3-2"></label>
+											  </span>
+											</b>
+											<span class="level3">
+												<em class="level-msg">漳州市营运中心</em>
+											</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<i class="tree-dot"></i>
+									<i class="tree-drop tree-drop-down"></i>
+									<span class="level2">华南区域</span>
+									<ul class="level-box">
+										<li>
+											<i class="tree-dot"></i>
+											<i class="tree-dot"></i>
+											<i class="tree-dot-end"></i>
+											<b class="check-d12">
+												<span class="mod-radio">  
+											    <input type="checkbox" id="organization-lv3-3" name="organization" class="organization-lvlast">
+											    <label for="organization-lv3-3"></label>
+											  </span>
+											</b>
+											<span class="level3">
+												<em class="level-msg">深圳市营运中心</em>
+											</span>	
+										</li>
+										<li>
+											<i class="tree-dot"></i>
+											<i class="tree-dot"></i>
+											<i class="tree-dot-end"></i>
+											<b class="check-d12">
+												<span class="mod-radio">  
+											    <input type="checkbox" id="organization-lv3-4" name="organization" class="organization-lv3">
+											    <label for="organization-lv3-4"></label>
+											  </span>
+											</b>
+											<span class="level3">
+												<em class="level-msg">惠州市营运中心</em>
+											</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<i class="tree-dot"></i>
+									<i class="tree-drop tree-drop-down"></i>
+									<b class="check-d12">
+												<span class="mod-radio">  
+											    <input type="checkbox" id="organization-lv2-3" name="organization" class="organization-lv3">
+											    <label for="organization-lv2-3"></label>
+											  </span>
+											</b>
+									<span class="level2">管理小组</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<i class="tree-drop tree-drop-down"></i>
+							<b class="check-d12">
+								<span class="mod-radio">  
+							    <input type="checkbox" id="organization-lv1-2" name="organization" class="organization-lv3">
+							    <label for="organization-lv1-2"></label>
+							  </span>
+							</b>
+							<span class="level1">总经办</span>
+						</li>
+						<li>
+							<i class="tree-drop tree-drop-down"></i>
+							<b class="check-d12">
+								<span class="mod-radio">
+									<!-- 其他类的class必须有"treeCheckedOther"-->
+							    <input type="checkbox" class="treeCheckedOther" id="treeCheckedOther1" name="organization" class="organization-lv3">
+							    <label for="treeCheckedOther1"></label>
+							  </span>
+							</b>
+							<span class="level1">其他</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 多选下拉 end -->
+			
+	  <div style="clear: both;"></div>
+	  <hr>
+	  
+	  <p>下拉多选级联： </p>
+	  <div style="width: 700px;height: 268px; border: 1px dashed #42d79f;">
+	  	<!-- 多选级联 -->
+		  <div class="ml-bd permission-set">
+				<ul class="option-select-tree">
+					<li>
+						<i class="tree-drop tree-drop-down"></i>
+						<b class="check-d12">
+							<span class="mod-radio ">  
+						    <input type="checkbox" id="permission-lv1-1" name="permission1" class="permission-lv1">
+						    <label for="permission-lv1-1"></label>
+						  </span>
+						</b>
+						<span class="level1">
+							一级权限1
+						</span>
+						<ul class="level-box">
+							<li>
+								<i class="tree-dot"></i>
+								<i class="tree-drop tree-drop-down"></i>
+								<b class="check-d12">
+									<span class="mod-radio ">  
+								    <input type="checkbox" id="permission-lv2-1" name="permission1" class="permission-lv2">
+								    <label for="permission-lv2-1"></label>
+								  </span>
+								</b>
+								<span class="level2">二级权限1</span>
+								<ul class="level-box">
+									<li>
+										<i class="tree-dot"></i>
+										<i class="tree-dot"></i>
+										<i class="tree-dot-end"></i>
+										<b class="check-d12">
+											<span class="mod-radio ">  
+										    <input type="checkbox" id="permission-lv3-1" name="permission1" class="permission-lv3">
+										    <label for="permission-lv3-1"></label>
+										  </span>
+										</b>
+										<span class="level3">
+											<em class="level-msg">三级权限1</em>
+										</span>	
+										<ul class="permission-last-ul">
+											<li>
+												<b class="check-d12">
+													<span class="mod-radio  ">  
+												    <input type="checkbox" id="permission-lv4-1" name="permission1" class="permission-lvlast">
+												    <label for="permission-lv4-1"></label>
+												  </span>四级（按钮）一
+												</b>
+											</li>
+											<li>
+												<b class="check-d12">
+													<span class="mod-radio  ">  
+												    <input type="checkbox" id="permission-lv4-2" name="permission1" class="permission-lvlast">
+												    <label for="permission-lv4-2"></label>
+												  </span>四级（按钮）二
+												</b>
+											</li>
+											<li>
+												<b class="check-d12">
+													<span class="mod-radio  ">  
+												    <input type="checkbox" id="permission-lv4-3" name="permission1" class="permission-lvlast">
+												    <label for="permission-lv4-3"></label>
+												  </span>四级（按钮）三
+												</b>
+											</li>
+											<li>
+												<b class="check-d12">
+													<span class="mod-radio  ">  
+												    <input type="checkbox" id="permission-lv4-4" name="permission1" class="permission-lvlast">
+												    <label for="permission-lv4-4"></label>
+												  </span>四级（按钮）四
+												</b>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<i class="tree-dot"></i>
+										<i class="tree-dot"></i>
+										<i class="tree-dot-end"></i>
+										<b class="check-d12">
+											<span class="mod-radio ">  
+										    <input type="checkbox" id="permission-lv3-2" name="permission1" class="permission-lv3">
+										    <label for="permission-lv3-2"></label>
+										  </span>
+										</b>
+										<span class="level3">
+											<em class="level-msg">三级权限2</em>
+										</span>
+										<ul class="permission-last-ul">
+											<li>
+												<b class="check-d12">
+													<span class="mod-radio  ">  
+												    <input type="checkbox" id="permission-lv4-5" name="permission1" class="permission-lvlast">
+												    <label for="permission-lv4-5"></label>
+												  </span>四级（按钮）一
+												</b>
+											</li>
+											<li>
+												<b class="check-d12">
+													<span class="mod-radio  ">  
+												    <input type="checkbox" id="permission-lv4-6" name="permission1" class="permission-lvlast">
+												    <label for="permission-lv4-6"></label>
+												  </span>四级（按钮）二
+												</b>
+											</li>
+											<li>
+												<b class="check-d12">
+													<span class="mod-radio  ">  
+												    <input type="checkbox" id="permission-lv4-7" name="permission1" class="permission-lvlast">
+												    <label for="permission-lv4-7"></label>
+												  </span>四级（按钮）三
+												</b>
+											</li>
+											<li>	
+												<b class="check-d12">
+													<span class="mod-radio  ">  
+												    <input type="checkbox" id="permission-lv4-8" name="permission1" class="permission-lvlast">
+												    <label for="permission-lv4-8"></label>
+												  </span>四级（按钮）四
+												</b>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<i class="tree-dot"></i>
+								<i class="tree-drop tree-drop-down"></i>
+								<b class="check-d12">
+									<span class="mod-radio ">  
+								    <input type="checkbox" id="permission-lv2-2" name="permission1" class="permission-lv2">
+								    <label for="permission-lv2-2"></label>
+								  </span>
+								</b>
+								<span class="level2">二级权限2</span>
+								<ul class="level-box">
+									<li>
+										<i class="tree-dot"></i>
+										<i class="tree-dot-none"></i>
+										<i class="tree-dot-end"></i>
+										<b class="check-d12">
+											<span class="mod-radio">  
+										    <input type="checkbox" id="permission-lv3-3" name="permission1" class="permission-lvlast">
+										    <label for="permission-lv3-3"></label>
+										  </span>
+										</b>
+										<span class="level3">
+											<em class="level-msg">三级权限3</em>
+										</span>	
+									</li>
+									<li>
+										<i class="tree-dot"></i>
+										<i class="tree-dot-none"></i>
+										<i class="tree-dot-end"></i>
+										<b class="check-d12">
+											<span class="mod-radio">  
+										    <input type="checkbox" id="permission-lv3-4" name="permission1" class="permission-lv3">
+										    <label for="permission-lv3-4"></label>
+										  </span>
+										</b>
+										<span class="level3">
+											<em class="level-msg">三级权限4</em>
+										</span>
+										<ul class="permission-last-ul">
+											<li>
+												<b class="check-d12">
+													<span class="mod-radio">  
+												    <input type="checkbox" id="permission-lv4-13" name="permission1" class="permission-lvlast">
+												    <label for="permission-lv4-13"></label>
+												  </span>四级（按钮）一
+												</b>
+											</li>
+											<li>
+												<b class="check-d12">
+													<span class="mod-radio">  
+												    <input type="checkbox" id="permission-lv4-14" name="permission1" class="permission-lvlast">
+												    <label for="permission-lv4-14"></label>
+												  </span>四级（按钮）二
+												</b>
+											</li>
+											<li>
+												<b class="check-d12">
+													<span class="mod-radio">  
+												    <input type="checkbox" id="permission-lv4-15" name="permission1" class="permission-lvlast">
+												    <label for="permission-lv4-15"></label>
+												  </span>四级（按钮）三
+												</b>
+											</li>
+											<li>	
+												<b class="check-d12">
+													<span class="mod-radio">  
+												    <input type="checkbox" id="permission-lv4-16" name="permission1" class="permission-lvlast">
+												    <label for="permission-lv4-16"></label>
+												  </span>四级（按钮）四
+												</b>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<i class="tree-drop tree-drop-down"></i>
+						<b class="check-d12">
+							<span class="mod-radio">
+								<!-- 内部没有下级时 需增加标记className:permission-lvlast-->
+						    <input type="checkbox" id="permission-lv1-2" name="permission1" class="permission-lv1 permission-lvlast">
+						    <label for="permission-lv1-2"></label>
+						  </span>
+						</b>
+						<span class="level1">一级权限2</span>
+					</li>
+				</ul>
+			</div>
+			<!-- 多选级联end -->
+			
+	  </div>
+	  <div style="clear: both;"></div>
+	  <hr>
+		
+		<div style="font-size:12px;color: #999;padding-left: 20px;">
+			ps: 几种常用select变种，样式可根据实际项目更改。基于jQuery，有空再用原生js重写。
+		</div>
+	</body>
+</html>
