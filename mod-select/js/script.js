@@ -48,7 +48,7 @@ function mod_select(){
 };
 
 
-// select-tree 模拟
+// select-tree模拟
 function mod_select_tree(){
 	//== 选值
 	$(".option-select-tree span").on("click", function(){
