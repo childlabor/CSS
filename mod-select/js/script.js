@@ -207,7 +207,10 @@ function checkAllLinkage(){
 	// 反选
 	$ps.on("click", btn, function(){
 	// 子选框全部/部分/没有选中的情况
-		var n = 0; //目标选框子选框全部未选中 n=targetNodeLen-1 时全部选中
+
+		// 目标选框的子选框全部未选中;当 n=targetNodeLen-1 时全部选中
+		var n = 0; 
+		// 将对象转变为数组，方便使用reverse();目的从最底层开始遍历，符合逻辑
 		var abtn = jQuery.makeArray(btn).reverse();
 		
 		$.each(abtn,function(){
@@ -216,7 +219,7 @@ function checkAllLinkage(){
 			
 			for(var i=0;i<targetNodeLen;i++){
 				if(targetNode[i].checked){
-					n+=1; //统计目标下选框被选中的个数	
+					n+=1; // 统计目标下选框被选中的个数	
 				}
 			}
 			
@@ -225,13 +228,13 @@ function checkAllLinkage(){
 					$nextLabel = $notLast.next("label");
 			
 			if(this.checked){
-				if(n == targetNodeLen){ //全选中
+				if(n == targetNodeLen){ // 全选中
 					$notLast.prop("checked", true);
 					$nextLabel.css("backgroundColor", 'transparent');
 				} else if (n == 1){ // 全未选
 					$notLast.prop("checked", false);
 					$nextLabel.css("backgroundColor", 'transparent');
-				} else { //部分选中
+				} else { // 部分选中
 					$nextLabel.css("backgroundColor", '#999');
 				}	
 			} else {
